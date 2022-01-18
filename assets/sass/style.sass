@@ -7,8 +7,8 @@
     -webkit-box-sizing: border-box
     box-sizing: border-box
 
-html
-    background-color: $dark-grey
+html 
+    background-color: $color-background
     font-family: $font
     font-size: 16px
 
@@ -32,7 +32,7 @@ header
 
 h1,h2,h3
     margin-bottom: 0.5em
-    font-family: 'Didact Gothic', sans-serif
+    font-family: $font
     opacity: 0.6
 
 li
@@ -49,11 +49,13 @@ p
 a
     color: $links
     text-decoration: none
+    padding-bottom: 2px;
     border-bottom: 2px solid $links
-    +ease(0.5s)
+    +ease(0.1s)
     &:hover
         color: $links-hover
         font-style: none
+        border-bottom-color: $pink-accent
     &:active
         color: $links
 
@@ -128,3 +130,12 @@ nav
 .go-center
     justify-content: center
     align-items: center
+
+@keyframes cursor 
+  0% 
+    opacity: 0; 
+  50%  
+    opacity: 1; 
+  100% 
+    opacity: 0; 
+

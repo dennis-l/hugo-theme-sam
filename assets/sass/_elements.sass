@@ -1,12 +1,22 @@
 #splash
     min-height: calc(100vh - 6em)
 
+.index-title
+    font-family: $font
+    color: lighten($pink-accent, 10%)
+    font-size: 3rem
+    font-weight: 300
+    margin-bottom: 2rem
+    line-height: 1.5em
+    border-bottom: 0px solid $links
+
 .big-link
     font-family: $font
     font-size: 3rem
     font-weight: 300
     margin-bottom: 2rem
     line-height: 1.5em
+    border-bottom: 5px solid $links
 
 #title
     margin-top: 3rem
@@ -42,7 +52,7 @@ article
         width: 100%
     & pre
         line-height: 2rem
-        border-radius: 3px
+        border-radius: 10px
         padding: 1rem
         overflow-x: auto
         background-color: $code-block
@@ -52,10 +62,11 @@ article
         border: none
     & code
         font-size: 0.9rem
-        font-family: 'Source Code Pro', monospace
+        font-family: $code_font
         padding: 0.1rem
         border-radius: 3px
         border: 1px solid $links
+        letter-spacing: 0.1px
     & img
         width: 100%
         max-width: 100%

@@ -23,17 +23,24 @@
 
     <nav role="navigation" class="flex-container" id="splash">
 
+
+        {{ if .Site.Params.IndexName }}
+            <span class="index-title">
+                {{ .Site.Params.IndexName | emojify}}
+            </span>
+        {{ end }}
+
         {{ if .Site.Params.mainMenu }}
         {{ range .Site.Params.mainMenu }}
             <a href="{{.link}}" class="big-link">
-                {{.text}}
+                {{.text | emojify}}
             </a>
         {{ end }}
 
         {{ else }}
         {{ range .Site.Sections }}
             <a href="{{.RelPermalink}}" class="big-link">
-                {{.Title | markdownify}}
+                {{.Title | markdownify | emojify}}
             </a>
         {{ end }}
         {{ end }}
